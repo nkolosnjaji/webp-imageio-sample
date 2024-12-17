@@ -20,21 +20,21 @@ jobs:
             os: ubuntu-latest
             platform: unix
             arch: x86_64
+            install_tools_command: sudo apt-get update && sudo apt-get install gcc make autoconf automake libtool
           - suffix: dylib
             os: macos-12
             platform: mac
             arch: x86_64
+            install_tools_command: brew install gcc make autoconf automake libtool
           - suffix: dylib
             os: macos-14
             platform: mac
             arch: aarm64
+            install_tools_command: brew install gcc make autoconf automake libtool
     steps:
       - uses: actions/checkout@v4
         with:
           submodules: recursive
-      - name: Debug
-        working-directory: ./submodules/libwebp
-        run: ls -la ./
       - name: Build WebP lib
         working-directory: ./submodules/libwebp
         run: |
@@ -58,6 +58,6 @@ jobs:
         name: Upload WebP libs
         with:
           name: webp-imageio_${{ matrix.platform }}_${{ matrix.arch }}
-          path: /tmp/webp-java-imageio/
+          path: /tmp/webp-java-imageio/lib/
       - name:
         run: ls -la /tmp/webp-java-imageio/
