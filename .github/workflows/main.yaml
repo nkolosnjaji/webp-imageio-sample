@@ -60,6 +60,6 @@ jobs:
         name: Upload WebP libs
         with:
           name: webp-imageio_${{ matrix.platform }}_${{ matrix.arch }}
-          path: /tmp/webp-java-imageio/lib/
-      - name:
-        run: ls -la /tmp/webp-java-imageio/
+          path: ${{ github.workspace }}/webp-imageio-lib/webp_compiled
+      - name: Debug compiled folder
+        run: ls -la ${{ github.workspace }}/webp-imageio-lib/webp_compiled
