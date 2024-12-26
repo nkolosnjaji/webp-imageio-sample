@@ -62,4 +62,4 @@ jobs:
           name: webp-imageio_${{ matrix.platform }}_${{ matrix.arch }}
           path: ${{ github.workspace }}/webp-imageio-lib/webp_compiled
       - name: Debug compiled folder
-        run: ls -la ${{ github.workspace }}/webp-imageio-lib/webp_compiled
+        run: ls -la ${{ github.workspace }}/webp-imageio-lib/webp_compiled/lib
