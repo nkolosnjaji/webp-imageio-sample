@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### CUSTOM ###
+/webp-imageio-lib/webp_compiled

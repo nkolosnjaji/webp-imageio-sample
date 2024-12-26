@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.nkolosnjaji</groupId>
+    <artifactId>webp-imageio-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>WebP JAVA ImageIO</name>
+    <description>WebP Java ImageIO reader and writer using project Panama</description>
+
+    <url/>
+    <licenses>
+        <license>
+            <name>BSD-3-Clause license</name>
+            <url>http://opensource.org/licenses/BSD-3-Clause</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>nikkol1985</id>
+            <name>Nikola Kološnjaji</name>
+            <email>nikkol1985@yahoo.com</email>
+        </developer>
+    </developers>
+    <scm>
+        <connection/>
+        <developerConnection/>
+        <tag/>
+        <url/>
+    </scm>
+
+    <modules>
+        <module>webp-imageio-lib</module>
+        <module>webp-imageio-core</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>23</maven.compiler.source>
+        <maven.compiler.target>23</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <slf4j-api.version>2.0.13</slf4j-api.version>
+        <junit-bom.version>5.10.2</junit-bom.version>
+        <logback-core.version>1.5.6</logback-core.version>
+    </properties>
+
+
+
+</project>
+
+
