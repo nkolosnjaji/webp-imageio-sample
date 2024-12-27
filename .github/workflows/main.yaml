@@ -30,7 +30,7 @@ jobs:
           - suffix: dylib
             os: macos-latest
             platform: mac
-            arch: aarm64
+            arch: aarch64
             install_tools_command: brew install make autoconf automake libtool
     steps:
       - uses: actions/checkout@v4
