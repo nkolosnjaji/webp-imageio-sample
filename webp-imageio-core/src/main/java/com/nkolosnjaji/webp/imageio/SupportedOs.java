@@ -4,8 +4,7 @@ enum SupportedOs {
 
     LINUX_AMD_64("unix", "amd64", "so"),
     MAC_X86_64("mac", "x86_64", "dylib"),
-    MAC_AARM_64("mac", "aarm64", "dylib"),
-    WIN_AMD_64("windows", "amd64", "dll");
+    MAC_AARM_64("mac", "aarch64", "dylib");
 
     public final String osName;
 

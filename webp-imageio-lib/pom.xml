@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>webp-imageio-lib</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <properties>
         <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
@@ -25,6 +25,16 @@
                 </os>
             </activation>
             <build>
+                <resources>
+                    <resource>
+                        <directory>webp_compiled/lib</directory>
+                        <targetPath>lib/mac/aarch64</targetPath>
+                        <includes>
+                            <include>libsharpyuv.0.dylib</include>
+                            <include>libwebp.7.dylib</include>
+                        </includes>
+                    </resource>
+                </resources>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
@@ -51,5 +61,18 @@
             </build>
         </profile>
     </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-install-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <version>3.1.1</version>
+                <configuration>
+                    <allowIncompleteProjects>true</allowIncompleteProjects>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

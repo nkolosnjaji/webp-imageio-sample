@@ -13,11 +13,11 @@ public class OsUtils {
     private OsUtils() {}
 
     public static Path getPathLibSharpYuv() {
-        return getLibPath("libsharpyuv");
+        return getLibPath("libsharpyuv.0");
     }
 
     public static Path getPathLibWebP() {
-        return getLibPath("libwebp");
+        return getLibPath("libwebp.7");
     }
 
     private static Path getLibPath(String libName) {
