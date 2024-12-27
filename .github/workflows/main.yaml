@@ -67,7 +67,7 @@ jobs:
           distribution: 'temurin'
           java-version: '23'
       - run: mvn -B package -DskipTests
-      - run: jar -xf ./webp-imageio-lib/target/*.jar
+      - run: jar -xf ${{ github.workspace }}/webp-imageio-lib/target/*.jar
       - name: Debug compiled folder
         run: ls -la ${{ github.workspace }}/webp-imageio-lib/target/
       - name: Debug compiled folder 2
